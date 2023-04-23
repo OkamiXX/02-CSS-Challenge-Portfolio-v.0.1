@@ -1,4 +1,8 @@
 /*Creates the color variables to make the work easirt. */
+*{
+    box-sizing:content-box ;
+}
+
 :root {
     --azul: rgba(0, 204, 255, 0.637);
     --gris: #222222;
@@ -158,6 +162,83 @@ figure .page-undertitle:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     transition: all ease-in-out 600ms;
 }
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--gris);
+}
+
+.about-me  h3{
+    display: flex;
+    float: left;
+    width: 15%;
+    font-size: 50px;
+    border-right: 7px solid var(--azul);
+    margin-left: 20px;
+    padding-right: 20px;
+    background-color: var(--gris);
+    color: aliceblue;
+    
+}
+
+.about-me p {
+    float: right;
+    flex-wrap: wrap;
+    
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px;
+    padding-left: 35px;
+    color: aliceblue;
+}
+
+
+.work {
+    float: right;
+    width: 80%;
+    display: block;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+main .report {
+    display: flex;
+    float: right;
+}
+main .LED {
+    display: flex;
+    float: right;
+}
+main .calculator {
+    display: flex;
+    float: right;
+}
+main .pastel {
+    display: flex;
+    float: right;
+}
+main .Run {
+    display: flex;
+    float: right;
+}
+
+
+
+footer .foot-navigator{
+    float: right;
+    width: 80%;
+    display: block;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 700px) {
     body {
