@@ -10,7 +10,7 @@
 
 /*Sets the color of the whole background.*/
 html {
-    background: rgba(77, 77, 77, 0.014);
+    background: rgba(255, 0, 0, 0.014);
 }
 
 /*Sets the default style for all the body.*/
@@ -140,15 +140,17 @@ figure {
 /* HAD A HARD TIME WITH THIS */
 /* COULD NOT STICK TO THE SAME POSITION BUT NOW IT DOES. */
 figure .page-undertitle {
-    width: auto;
-    height: auto;
+    width: 350px;
+    height: 100px;
     color: aliceblue;
     background-color: var(--azul);
-    display:flex;
-    position:absolute;
-    flex-direction: row;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
 
-    padding: 20px;
+
+    
 
     margin-left: 90%;
     margin-bottom: 80%;
@@ -163,85 +165,192 @@ figure .page-undertitle:hover{
     transition: all ease-in-out 600ms;
 }
 
+
 .about-me {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    
     background-color: var(--gris);
 }
 
 .about-me  h3{
     display: flex;
-    float: left;
-    width: 15%;
-    font-size: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
     border-right: 7px solid var(--azul);
-    margin-left: 20px;
-    padding-right: 20px;
+    
+    flex-basis: 200px;
+    font-size: 50px;
+    
+    margin-top: 85px;
+    padding-left: 4%;
     background-color: var(--gris);
     color: aliceblue;
     
 }
 
 .about-me p {
-    float: right;
-    flex-wrap: wrap;
-    
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
+    flex-basis: 80%;
     margin-top: 85px;
     padding-left: 35px;
     color: aliceblue;
 }
 
-
 .work {
-    float: right;
-    width: 80%;
-    display: block;
-    margin-bottom: 100px;
     display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    background-color: var(--gris);
+}
+.work h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-right: 7px solid var(--azul);
+    
+    flex-basis: 200px;
+    font-size: 50px;
+    
+    margin-top: 85px;
+    padding-left: 4%;
+    background-color: var(--gris);
+    color: aliceblue;
 }
 
-main .report {
-    display: flex;
-    float: right;
-}
-main .LED {
-    display: flex;
-    float: right;
-}
-main .calculator {
-    display: flex;
-    float: right;
-}
-main .pastel {
-    display: flex;
-    float: right;
-}
-main .Run {
-    display: flex;
-    float: right;
+.work h4, h5 {
+    flex-basis: 80%;
+    margin-top: 85px;
+    padding-left: 35px;
+    color: aliceblue;
 }
 
+footer {
+    background-color: var(--gris);
+    }
 
+footer h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+
+    border-right: 7px solid var(--azul);
+    
+    flex-basis: 200px;
+    font-size: 50px;
+    
+    margin-top: 85px;
+    padding-left: 4%;
+    padding-right: 5px;
+    background-color: var(--gris);
+    color: aliceblue;
+}
 
 footer .foot-navigator{
+    
+    margin-top: 85px;
+    padding-left: 35px;
+    padding-right: 20px;
+    color: aliceblue;
     float: right;
-    width: 80%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
     display: block;
-    margin-bottom: 100px;
+    overflow: auto;
+}
+
+footer .foot-navigator {
+    flex-basis: 80%;
+    margin-top: 85px;
+    padding-left: 35px;
+    color: aliceblue;
+    list-style: none;
+}
+
+.foot-navigator ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.foot-navigator li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 44px;
+    position: relative;
+}
+
+.foot-navigator a {
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--azul);
+    padding-bottom: 3px;
+    border-radius: 1.48px;
+}
+
+.foot-navigator a:hover {
+    color: var(--azul);
+}
+ 
+.foot-navigator a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0%;
+    background-color: var(--azul);
+    position: absolute;
+    top: 40px;
+    border-radius: 20px;
+    transition: all ease-in-out 300ms;
+}
+
+.foot-navigator a:hover::before {
+    width: 100%;
 }
 
 
 
-
-
-
-
-@media screen and (max-width: 700px) {
-    body {
+@media all and (max-width: 768px) {
+    
+    html, body, p {
+        width: 100%;
+        overflow-x: hidden;
         background-color: blue;
     }
+
+    h1, h2, h3, h4, h5, h6 {
+        flex-basis: 100%;
+        font-size: 20px;
+      }
+
+      figure .page-undertitle {
+        overflow-x: hidden;
+      }
+    
+}
+@media all and (max-width: 1000px) {
+    
+    html, body, p {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: blue;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        flex-basis: 100%;
+        font-size: 20px;
+      }
+    
 }
